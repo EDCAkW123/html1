@@ -1,11 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Добро пожаловать</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+		}
+
+		.container {
+			background: white;
+			border-radius: 20px;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			padding: 60px 40px;
+			max-width: 600px;
+			text-align: center;
+			animation: slideIn 0.8s ease-out;
+		}
+
+		@keyframes slideIn {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		h1 {
+			color: #333;
+			font-size: 2.5em;
+			margin-bottom: 20px;
+			background: linear-gradient(135deg, #667eea, #764ba2);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		p {
+			color: #666;
+			font-size: 1.1em;
+			line-height: 1.6;
+			margin-bottom: 30px;
+		}
+
+		.button-group {
+			display: flex;
+			gap: 15px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		button {
+			padding: 12px 30px;
+			font-size: 1em;
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			font-weight: 600;
+		}
+
+		.btn-primary {
+			background: linear-gradient(135deg, #667eea, #764ba2);
+			color: white;
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+		}
+
+		.btn-secondary {
+			background: white;
+			color: #667eea;
+			border: 2px solid #667eea;
+		}
+
+		.btn-secondary:hover {
+			background: #667eea;
+			color: white;
+			transform: translateY(-2px);
+		}
+
+		.features {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 20px;
+			margin-top: 40px;
+			padding-top: 40px;
+			border-top: 2px solid #eee;
+		}
+
+		.feature-item {
+			padding: 20px;
+		}
+
+		.feature-icon {
+			font-size: 2.5em;
+			margin-bottom: 10px;
+		}
+
+		.feature-text {
+			color: #666;
+			font-size: 0.9em;
+		}
+	</style>
 </head>
 <body>
-	<h1>Hello</h1>
+	<div class="container">
+		<h1>👋 Добро пожаловать!</h1>
+		<p>Это красивая и современная страница, созданная с помощью HTML и CSS. Наслаждайтесь минималистичным дизайном с плавными анимациями.</p>
+		
+		<div class="button-group">
+			<button class="btn-primary">Начать</button>
+			<button class="btn-secondary">Узнать больше</button>
+		</div>
+
+		<div class="features">
+			<div class="feature-item">
+				<div class="feature-icon">✨</div>
+				<div class="feature-text">Современный</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">🎨</div>
+				<div class="feature-text">Красивый</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">📱</div>
+				<div class="feature-text">Адаптивный</div>
+			</div>
+			<div class="feature-item">
+				<div class="feature-icon">⚡</div>
+				<div class="feature-text">Быстрый</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
